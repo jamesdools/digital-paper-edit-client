@@ -1,3 +1,8 @@
+/* eslint class-methods-use-this: 0 */
+import cuid from 'cuid';
+
+import annotationsDB from './annotations';
+
 class DemoApiWrapper {
   /**
    * Projects
@@ -30,19 +35,19 @@ class DemoApiWrapper {
   }
 
   async createProject(data) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { status: 'false' };
   }
 
   async updateProject(id, data) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { status: 'false' };
   }
 
   async deleteProject(id) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { ok: false, status: 'false', project: { } };
   }
@@ -68,7 +73,7 @@ class DemoApiWrapper {
   }
 
   async createTranscript(projectId, formData, data) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { status: 'false' };
   }
@@ -89,13 +94,13 @@ class DemoApiWrapper {
   }
 
   async updateTranscript(projectId, transcriptId, queryParamsOptions, data) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { ok: false };
   }
 
   async deleteTranscript(projectId, transcriptId) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }
@@ -103,23 +108,15 @@ class DemoApiWrapper {
   /**
    * Annotations
    */
-  // eslint-disable-next-line class-methods-use-this
   async getAllAnnotations(projectId, transcriptId) {
-
-    const response = await fetch('db/annotations.json');
-    let annotations = await response.json();
-
-    annotations = annotations.filter((annotation) => {
-      return annotation.transcriptId === transcriptId;
-    });
+    let annotations = annotationsDB.filter(item => item.transcriptId === transcriptId);
 
     if (annotations) {
-      annotations = annotations
-        .map((annotation) => {
-          annotation.id = annotation._id;
+      annotations = annotations.map((annotation) => {
+        annotation.id = annotation._id;
 
-          return annotation;
-        });
+        return annotation;
+      });
     } else {
       annotations = [];
     }
@@ -129,21 +126,26 @@ class DemoApiWrapper {
 
   // not used
   async getAnnotation(projectId, transcriptId, annotationId) {
-    const response = await fetch('db/annotations.json');
-    const annotations = await response.json();
-    const annotation = annotations[0];
+    const annotation = annotationsDB.filter(item => item.id === annotationId);
 
     return { annotation };
   }
 
   async createAnnotation(projectId, transcriptId, data) {
-    alert('Not implemented in demo mode');
+    // console.log('Not implemented in demo mode');
 
-    return { 'ok': false, status: 'false', annotation: [] };
+    const newAnnotation = data;
+    newAnnotation.id = cuid();
+
+    console.log(newAnnotation);
+
+    annotationsDB.push(newAnnotation);
+
+    return { annotation: newAnnotation };
   }
 
   async deleteAnnotation(projectId, transcriptId, annotationId) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { 'ok': false, status: 'false' };
   }
@@ -180,20 +182,20 @@ class DemoApiWrapper {
 
   // Create Label
   async createLabel(projectId, data) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return ({ ok: false, status: 'false' });
   }
 
   // Update Label
   async updateLabel(projectId, labelId, data) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }
   // Delete Label
   async deleteLabel(projectId, labelId) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { status: 'false' };
   }
@@ -239,19 +241,19 @@ class DemoApiWrapper {
   }
 
   async createPaperEdit(projectId, data) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }
 
   async updatePaperEdit(projectId, id, data) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { ok:true, status: 'false' };
   }
 
   async deletePaperEdit(projectId, id) {
-    alert('Not implemented in demo mode');
+    console.log('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }

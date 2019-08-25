@@ -206,14 +206,7 @@ class Transcript extends Component {
       ApiWrapper.createAnnotation(this.props.projectId, this.props.transcriptId, newAnnotation)
         .then(json => {
           const newAnnotationFromServer = json.annotation;
-          console.log('newAnnotationFromServer', newAnnotationFromServer);
-          // console.log('handleCreateAnnotation', newAnnotation);
-          // this.setState({
-          //   labelsOptions: json.labels
-          // });
           const newAnnotationsSet = JSON.parse(JSON.stringify(annotations));
-          // newAnnotation.id = json.annotation.id;
-          // newAnnotationsList.push(newAnnotation);
           newAnnotationsSet.push(newAnnotationFromServer);
 
           this.setState( { annotations: newAnnotationsSet });
