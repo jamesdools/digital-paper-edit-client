@@ -4,10 +4,7 @@ import cuid from 'cuid';
 import annotationsDB from './annotations';
 
 class DemoApiWrapper {
-  /**
-   * Projects
-   */
-  // eslint-disable-next-line class-methods-use-this
+  /* Projects */
   async getAllProjects() {
     const response = await fetch('db/projects.json');
     const projects = await response.json();
@@ -23,7 +20,6 @@ class DemoApiWrapper {
     }
   }
 
-  // eslint-disable-next-line class-methods-use-this
   async getProject(id) {
     const response = await fetch('db/projects.json');
     const projects = await response.json();
@@ -52,10 +48,7 @@ class DemoApiWrapper {
     return { ok: false, status: 'false', project: { } };
   }
 
-  /**
-   * Transcripts
-   */
-  // eslint-disable-next-line class-methods-use-this
+  /* Transcripts */
   async getTranscripts(projectId) {
     const response = await fetch('db/transcripts.json');
     let transcripts = await response.json();
@@ -105,9 +98,7 @@ class DemoApiWrapper {
     return { ok: false, status: 'false' };
   }
 
-  /**
-   * Annotations
-   */
+  /* Annotations */
   async getAllAnnotations(projectId, transcriptId) {
     let annotations = annotationsDB.filter(item => item.transcriptId === transcriptId);
 
@@ -132,13 +123,8 @@ class DemoApiWrapper {
   }
 
   async createAnnotation(projectId, transcriptId, data) {
-    // alert('Not implemented in demo mode');
-
     const newAnnotation = data;
     newAnnotation.id = cuid();
-
-    console.log(newAnnotation);
-
     annotationsDB.push(newAnnotation);
 
     return { annotation: newAnnotation };
@@ -150,12 +136,7 @@ class DemoApiWrapper {
     return { 'ok': false, status: 'false' };
   }
 
-  /**
-   * Labels
-   */
-
-  // Get All Labels
-  // eslint-disable-next-line class-methods-use-this
+  /* Labels */
   async getAllLabels(projectId) {
     const response = await fetch('db/labels.json');
     let labels = await response.json();
@@ -187,22 +168,17 @@ class DemoApiWrapper {
     return ({ ok: false, status: 'false' });
   }
 
-  // Update Label
   async updateLabel(projectId, labelId, data) {
     alert('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }
-  // Delete Label
   async deleteLabel(projectId, labelId) {
     alert('Not implemented in demo mode');
 
     return { status: 'false' };
   }
-  /**
-   * PaperEdits
-   */
-  // eslint-disable-next-line class-methods-use-this
+  /* PaperEdits */
   async getAllPaperEdits(projectId) {
     const response = await fetch('db/paperedits.json');
     let paperedits = await response.json();
@@ -224,7 +200,6 @@ class DemoApiWrapper {
     return data.paperedits;
   }
 
-  // eslint-disable-next-line class-methods-use-this
   async getPaperEdit(projectId, id) {
     const paperEditId = id;
     const response = await fetch('db/paperedits.json');
@@ -341,5 +316,4 @@ class DemoApiWrapper {
   }
 }
 
-// module.exports = DemoApiWrapper;
 export default DemoApiWrapper;
