@@ -81,9 +81,9 @@ class Transcript extends Component {
     ApiWrapper.createLabel(this.props.projectId, newLabel)
     // TODO: add error handling
       .then(json => {
-        this.setState({
-          labelsOptions: json.labels
-        });
+        // this.setState({
+        //   labelsOptions: json.labels
+        // });
       });
   }
 
@@ -93,9 +93,9 @@ class Transcript extends Component {
     ApiWrapper.updateLabel(this.props.projectId, updatedLabel.id, updatedLabel)
     // TODO: add error handling
       .then(json => {
-        this.setState({
-          labelsOptions: json.labels
-        });
+        // this.setState({
+        //   labelsOptions: json.labels
+        // });
       });
   }
 
@@ -103,9 +103,9 @@ class Transcript extends Component {
     ApiWrapper.deleteLabel(this.props.projectId, labelIid)
     // TODO: add error handling
       .then(json => {
-        this.setState({
-          labelsOptions: json.labels
-        });
+        // this.setState({
+        //   labelsOptions: json.labels
+        // });
       });
   }
 

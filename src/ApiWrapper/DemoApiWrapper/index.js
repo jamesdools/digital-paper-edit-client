@@ -35,19 +35,19 @@ class DemoApiWrapper {
   }
 
   async createProject(data) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { status: 'false' };
   }
 
   async updateProject(id, data) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { status: 'false' };
   }
 
   async deleteProject(id) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { ok: false, status: 'false', project: { } };
   }
@@ -73,7 +73,7 @@ class DemoApiWrapper {
   }
 
   async createTranscript(projectId, formData, data) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { status: 'false' };
   }
@@ -94,13 +94,13 @@ class DemoApiWrapper {
   }
 
   async updateTranscript(projectId, transcriptId, queryParamsOptions, data) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { ok: false };
   }
 
   async deleteTranscript(projectId, transcriptId) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }
@@ -132,7 +132,7 @@ class DemoApiWrapper {
   }
 
   async createAnnotation(projectId, transcriptId, data) {
-    // console.log('Not implemented in demo mode');
+    // alert('Not implemented in demo mode');
 
     const newAnnotation = data;
     newAnnotation.id = cuid();
@@ -145,7 +145,7 @@ class DemoApiWrapper {
   }
 
   async deleteAnnotation(projectId, transcriptId, annotationId) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { 'ok': false, status: 'false' };
   }
@@ -159,10 +159,10 @@ class DemoApiWrapper {
   async getAllLabels(projectId) {
     const response = await fetch('db/labels.json');
     let labels = await response.json();
+
     const defaultLabel = labels[0];
-    labels = labels.filter((label) => {
-      return label.projectId === projectId;
-    });
+
+    labels = labels.filter((label) => label.projectId === projectId);
     labels.unshift(defaultLabel);
 
     if (!labels) {
@@ -182,20 +182,20 @@ class DemoApiWrapper {
 
   // Create Label
   async createLabel(projectId, data) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return ({ ok: false, status: 'false' });
   }
 
   // Update Label
   async updateLabel(projectId, labelId, data) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }
   // Delete Label
   async deleteLabel(projectId, labelId) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { status: 'false' };
   }
@@ -241,19 +241,19 @@ class DemoApiWrapper {
   }
 
   async createPaperEdit(projectId, data) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }
 
   async updatePaperEdit(projectId, id, data) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { ok:true, status: 'false' };
   }
 
   async deletePaperEdit(projectId, id) {
-    console.log('Not implemented in demo mode');
+    alert('Not implemented in demo mode');
 
     return { ok: false, status: 'false' };
   }

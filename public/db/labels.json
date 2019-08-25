@@ -46,7 +46,16 @@
 	},
 	{
 		"value": "yellow",
-		"label": "D",
+		"label": "Test",
+		"color": "yellow",
+		"description": "",
+		"projectId": "94346281c4ad4938b7d0ae6fa9899bec",
+		"_id": "bddffe16cf024b2dbe74be4d64eb0ed4",
+		"id": "bddffe16cf024b2dbe74be4d64eb0ed4"
+	},
+	{
+		"value": "yellow",
+		"label": "Secondary",
 		"color": "yellow",
 		"description": "",
 		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
@@ -54,12 +63,30 @@
 		"id": "eab94271d5894c3a8800ee59cc03d7be"
 	},
 	{
-		"value": "yellow",
-		"label": "Test",
-		"color": "yellow",
+		"value": "crimson",
+		"label": "Label 2",
+		"color": "crimson",
 		"description": "",
-		"projectId": "94346281c4ad4938b7d0ae6fa9899bec",
-		"_id": "bddffe16cf024b2dbe74be4d64eb0ed4",
-		"id": "bddffe16cf024b2dbe74be4d64eb0ed4"
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7bf",
+		"id": "eab94271d5894c3a8800ee59cc03d7bf"
+	},
+	{
+		"value": "darkblue",
+		"label": "Label 3",
+		"color": "darkblue",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7bg",
+		"id": "eab94271d5894c3a8800ee59cc03d7bg"
+	},
+	{
+		"value": "greenyellow",
+		"label": "Label 4",
+		"color": "greenyellow",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7bh",
+		"id": "eab94271d5894c3a8800ee59cc03d7bh"
 	}
 ]
