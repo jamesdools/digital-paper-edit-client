@@ -63,8 +63,26 @@
 		"id": "eab94271d5894c3a8800ee59cc03d7be"
 	},
 	{
+		"value": "blue",
+		"label": "Background",
+		"color": "blue",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7a1",
+		"id": "eab94271d5894c3a8800ee59cc03d7a1"
+	},
+	{
+		"value": "red",
+		"label": "Emotions and perceptions of Facebook",
+		"color": "red",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7a2",
+		"id": "eab94271d5894c3a8800ee59cc03d7a2"
+	},
+	{
 		"value": "crimson",
-		"label": "Label 2",
+		"label": "Ambitions",
 		"color": "crimson",
 		"description": "",
 		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
@@ -72,9 +90,18 @@
 		"id": "eab94271d5894c3a8800ee59cc03d7bf"
 	},
 	{
-		"value": "darkblue",
-		"label": "Label 3",
-		"color": "darkblue",
+		"value": "pink",
+		"label": "Challenges, urgency, domination",
+		"color": "pink",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7b2",
+		"id": "eab94271d5894c3a8800ee59cc03d7b2"
+	},
+	{
+		"value": "green",
+		"label": "Positive and Negative engagement",
+		"color": "green",
 		"description": "",
 		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
 		"_id": "eab94271d5894c3a8800ee59cc03d7bg",
@@ -82,11 +109,47 @@
 	},
 	{
 		"value": "greenyellow",
-		"label": "Label 4",
+		"label": "Concept 1",
 		"color": "greenyellow",
 		"description": "",
 		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
 		"_id": "eab94271d5894c3a8800ee59cc03d7bh",
 		"id": "eab94271d5894c3a8800ee59cc03d7bh"
+	},
+	{
+		"value": "deepskyblue",
+		"label": "Concept 2",
+		"color": "deepskyblue",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7b4",
+		"id": "eab94271d5894c3a8800ee59cc03d7b4"
+	},
+	{
+		"value": "coral",
+		"label": "Concept 3",
+		"color": "coral",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7b5",
+		"id": "eab94271d5894c3a8800ee59cc03d7b5"
+	},
+	{
+		"value": "chocolate",
+		"label": "Concept 4",
+		"color": "chocolate",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7b6",
+		"id": "eab94271d5894c3a8800ee59cc03d7b6"
+	},
+	{
+		"value": "burlywood",
+		"label": "Concept 5",
+		"color": "burlywood",
+		"description": "",
+		"projectId": "10046281c4ad4938b7d0ae6fa9899bec",
+		"_id": "eab94271d5894c3a8800ee59cc03d7b7",
+		"id": "eab94271d5894c3a8800ee59cc03d7b7"
 	}
 ]
